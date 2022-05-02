@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>validação  Formulario</title>
+        <meta charset="utf-8">
+        <script>
+            function validar() {
+                var nome = formulario.nome.value;
+                var email = formulario.email.value;
+                var senha = formulario.senha.value;
+
+               if (nome == "") {
+                   alert("Preencha o campo com seu nome");
+                   formulario.name.focus();
+                   return false;
+               }
+               if (email == "") {
+                   alert("Preencha o campo e-mail");
+                   formulario.email.focus();
+                   return false;
+               }
+               if (senha == "") {
+                   alert("Preencha o campo senha");
+                   formulario.senha.focus();
+                   return false;
+               } else if (senha.length < 6) {
+                   alert("Senha inválida - precisa ter 6 caracteres ou mais.");
+                   formulario.senha.focus();
+                   return false;
+               }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="enviar.php" method="post" name="formulario">
+            Nome:
+            <input type="text" name="nome"><br /><br />
+            Email:
+            <input type="email" name="email"><br /><br />
+            Senha:
+            <input type="password" name="senha"><br /><br />
+            <input type="submit" onclick="validar()">
+        </form>
+    </body>
+</html>
