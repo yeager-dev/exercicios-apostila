@@ -1,0 +1,31 @@
+#geral {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#topo {
+    height: 150px;
+    background: #CF0;
+}
+
+#lateral1 {
+    width: 170px;
+    background: #CCC;
+    float: left;
+}
+
+#lateral2 {
+    width: 170px;
+    background: #CCC;
+    float: right;
+}
+
+#conteudo {
+    margin: 0 180px;
+}
+
+#rodape {
+    background: #CF0;
+    height: 60px;
+    clear: both;
+}
