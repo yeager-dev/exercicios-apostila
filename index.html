@@ -63,9 +63,7 @@
 
             const tree = data.tree.sort((a, b) => {
                 return a.path.localeCompare(b.path, undefined, { numeric: true });
-            });
-
-            console.log(tree);
+            }).filter(({ type }) => type !== "tree");
 
             tree.forEach((file) => {
                 const element = document.createElement("li");
